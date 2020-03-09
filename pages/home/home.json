@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "tab-control":"../../components/tab-control/tab-control",
+    "w-goods":"/components/w-goods/w-goods",
+    "backTop":"/components/backTop/backTop"
+    
+  },
+  "navigationBarTitleText": "购物车",
+  "navigationBarTextStyle": "white"
+}

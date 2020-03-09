@@ -1,0 +1,8 @@
+<view class="item" bindtap="itemClick">
+  <image src="{{goodItem.show.img}}"></image>
+  <view class="title">{{goodItem.title}}</view>
+  <view class="bottom">
+    <view class="price">{{goodItem.price}}</view>
+    <view class="cfav"><image src="/assets/images/common/favor.png"></image><text>{{goodItem.cfav}}</text></view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+/* pages/home/home.wxss */
+/* .scroll{
+  position: relative;
+} */
+.swiper-item image{
+  height: 100%;
+  width: 100%;
+}
+.recommends{
+  margin-top:20rpx;
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 24rpx solid #eee;
+}
+.recommends-item{
+  flex: 1;
+  text-align: center;
+}
+.recommends-item image{
+  width: 160rpx;
+  height: 160rpx;
+}
+.feature image{
+  width: 100%;
+}
+
+

@@ -1,0 +1,26 @@
+/* components/goods-item/goods-item.wxss */
+.title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item image{
+  width: 100%;
+  border-radius: 5%;
+}
+.bottom{
+  display: flex;
+}
+.bottom .price{
+  flex: 1;
+  text-align: right;
+  color: #ff5777;
+}
+.cfav{
+  flex: 1;
+  padding-left: 10rpx;
+}
+.cfav image{
+  width: 32rpx;
+  height: 32rpx;
+}
