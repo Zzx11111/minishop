@@ -1,0 +1,40 @@
+/* pages/detail/childCpns/bottom-bar/bottom-bar.wxss */
+.bottom-bar{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  background-color: white;
+  height: 98rpx;
+  width: 100%;
+}
+.bottom-bar .icon{
+  flex: 1;
+  display: flex;
+}
+.icon .icon-item{
+  flex: 1;
+  display: inline-block;
+  text-align: center;
+}
+.icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.bottom-bar .enter-cart{
+  flex: 1;
+  display: flex;
+}
+.cart{
+  flex: 1;
+  background-color: rgb(252, 215, 93);
+  text-align: center;
+  color: #333030;
+  line-height: 98rpx;
+}
+.buy{
+  flex: 1;
+  text-align: center;
+  background-color: #ff5777;
+  color: white;
+  line-height: 98rpx;
+}

@@ -37,7 +37,6 @@ Page({
     const page = this.data.goods[type].page + 1;
     
     getHomeGoods(type,page).then(res => {
-      console.log(res.data.data.list)
       const newList = res.data.data.list;
       const oldList = this.data.goods[type].list;
       const ListKey = `goods.${type}.list`;
@@ -52,7 +51,6 @@ Page({
   },
   //tab-control点击事件
   tabClick(event){
-    console.log(event)
     const index = event.detail.index
     let currentType = ''
     if(index == '0'){

@@ -1,0 +1,33 @@
+<view class="shop">
+  <view class="logo">
+    <image src="{{GoodShopInfo.shopLogo}}"></image>
+    <text>{{GoodShopInfo.name}}</text>
+  </view>
+  <view class="describe">
+    <view class="left">
+      <view class="sale">
+        <view>
+          {{GoodShopInfo.cSells}}
+        </view>
+        <text>总销量</text>
+      </view>
+      <view class="baby">
+        <view>{{GoodShopInfo.cGoods}}</view>
+        <text>全部宝贝</text>
+      </view>
+    </view>
+    <view class="right">
+      <block wx:for="{{GoodShopInfo.score}}" wx:key="index">
+        <view class="evaluate">
+          <text>{{item.name}}</text>
+          <text class="{{item.isBetter == true ? 'high-text' : 'low-text'}}">{{item.score}}</text>
+          <text wx:if="{{item.isBetter == true}}" class="high">高</text>
+          <text wx:else class="low">低</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class="enter-shop">
+    进店逛逛
+  </view>
+</view>

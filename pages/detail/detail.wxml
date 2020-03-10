@@ -1,2 +1,35 @@
-<!--pages/detail/detail.wxml-->
-<view>{{iid}}</view>
+<!-- 轮播图 -->
+<swiper autoplay class="swiper">
+  <block wx:for="{{banners}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 基础信息 -->
+<view class="title">
+  {{GoodsBaseInfo.title}}
+</view>
+<view class="price">
+  <text class="newPrice">{{GoodsBaseInfo.newPrice}}</text>
+  <text class="oldPrice">{{GoodsBaseInfo.oldPrice}}</text>
+  <text class="discount">{{GoodsBaseInfo.discount}}</text>
+</view>
+<view class="cloumns">
+  <block wx:for="{{GoodsBaseInfo.columns}}" wx:key="index">
+    <text>{{item}}</text>
+  </block>
+</view>
+<view class="services">
+  <block wx:for="{{GoodsBaseInfo.services}}" wx:key="index">
+    <text>
+      {{item.name}}
+    </text>
+  </block>
+</view>
+<!-- 商店信息 -->
+<shop-info GoodShopInfo="{{GoodShopInfo}}"></shop-info>
+<!-- 详情信息 -->
+<w-detail-info detailInfo="{{detailInfo}}"></w-detail-info>
+<!-- 底部加入购物车 -->
+<bottom-bar bind:addCart="addCart"></bottom-bar>

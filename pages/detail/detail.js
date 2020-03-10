@@ -1,11 +1,16 @@
 // pages/detail/detail.js
+import { getDetail, GoodsBaseInfo} from '../../service/detail.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    iid:''
+    iid:'',
+    banners:[],
+    GoodsBaseInfo:{},
+    GoodShopInfo:{},
+    detailInfo:{}
   },
 
   /**
@@ -16,54 +21,24 @@ Page({
     this.setData({
       iid:options.iid
     })
+    this._getDetail(this.data.iid)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  _getDetail(iid){
+    getDetail(iid).then(res => {
+      console.log(res)
+      const baseInfo = new GoodsBaseInfo(res.data.result.itemInfo, res.data.result.columns, res.data.result.shopInfo.services);
+      const shopInfo = res.data.result.shopInfo;
+      const detailInfo = res.data.result.detailInfo;
+      this.setData({
+        banners:res.data.result.itemInfo.topImages,
+        GoodsBaseInfo: baseInfo,
+        GoodShopInfo: shopInfo,
+        detailInfo: detailInfo
+      })
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //加入购物车
+  addCart(){
+    
   }
 })
