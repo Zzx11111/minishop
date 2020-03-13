@@ -1,0 +1,22 @@
+.cart-bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #eeeeee;
+  display: flex;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.total{
+  flex:2;
+}
+.total icon {
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}
+.settlement{
+  flex: 1;
+  text-align: center;
+  background-color: #ff5777;
+  /* width:140rpx; */
+}

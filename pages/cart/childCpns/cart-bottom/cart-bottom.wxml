@@ -1,0 +1,9 @@
+<view class="cart-bottom">
+  <view class="total">
+    <icon type="success" bindtap="isAllSelect" color='{{isAllSelect ?"#ff5777":"#aaa"}}'></icon>
+    <text>合计：{{priceTotal}}</text>
+  </view>
+  <view class="settlement">
+    结算({{total}})
+  </view>
+</view>

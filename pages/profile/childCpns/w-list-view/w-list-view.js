@@ -1,12 +1,11 @@
-// components/w-goods/w-goods.js
+// pages/profile/childCpns/w-list-view/w-list-view.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    goodsList:{
-      type:Array,
-      value:[]
+    infos: {
+      type: Array
     }
   },
 
@@ -22,7 +21,5 @@ Component({
    */
   methods: {
 
-  },
-  created(){
   }
 })
